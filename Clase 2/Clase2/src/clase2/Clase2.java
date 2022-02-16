@@ -139,6 +139,9 @@ public class Clase2 {
         else if (eleccion.equals("7")){
             System.out.println("Chat princiapal!!!");
         }
+        
+        
+        ///todo el resto del codigo
     }
     
     //Switch
@@ -174,12 +177,13 @@ public class Clase2 {
         Scanner ingreso = new Scanner(System.in);
         String eleccion = ingreso.nextLine();
         
+        ///break -> switch, for, while
         switch (eleccion){
-            case "10":
+            case "10":  //eleccion == 10 -> verdadero | false ???
             System.out.println("Menu principal!!!");
             break;
-            case "holis":
-            case "9":
+            case "holis": //eleccion == "holis
+            case "9": //eleccion == 9 ???
             System.out.println("Contabilidad!!!");
             break;
             case "8":
@@ -189,6 +193,7 @@ public class Clase2 {
             System.out.println("Chat princiapal!!!");
             break;
         }
+        //reto del codigo
     }
     
     //Bucles
