@@ -50,18 +50,27 @@ public class Clase3 {
     //FOR
     public void Un_for(){
         /*
-            for (declaracion ; condicion ; incremento o decremento){
+            for (declaracion ; condicion_para_que_siga_leyendo ; incremento o decremento){
                 Algun_Codigo
             }
             variable = variable + X; -> variable += X;
             variable = variable - X; -> variable -= X;
             variable = variable * X; -> variable *= X;
-        */
-        for(int i = 0; i < 5; i = i + 1){
-            // i -> 0
+        */ 
+        // -6, -4, -2, 0, 2, 4  ---> 6 < 5 -> false
+        for(int i = -6;i<5;){
+            // i -> 5
             System.out.println("Esto es un for :>");
+            //CONCATENAR Y SOLO SE PUEDE CON EL STRING Y UNA SUMA 
+            //int a = "hola" + 3;  ---> no se puede :c
+            //String a = "hola" + 3;  --->
+            //  1. Convierte todo lo del lado derecho a un texto
+            //        "hola" + 3   -> "hola" + "3" 
+            //  2. Ahora que todo es texto, los une sin espacio
+            //        "hola3"
+            System.out.println("La variable i vale: " + i);
+            i += 2;
         }
-        System.out.println("Resto del codigo");
     }
     
     public static void main(String[] args){
