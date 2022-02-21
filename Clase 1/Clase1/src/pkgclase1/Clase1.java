@@ -1,5 +1,5 @@
 
-package clase1;
+package pkgclase1;
 import java.lang.Math; //Tener acceso a funciones matematicas sin tener que escribirlas nosotros
 import java.util.Scanner;
 
