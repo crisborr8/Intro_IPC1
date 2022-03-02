@@ -64,6 +64,19 @@ public class Clase5 {
         // 6. Preguntar si se desea realizar otra operacion, si es así repetir el codigo si no, terminarlo
         
         //while -> repite 0 o mas veces    dowhile -> repite 1 o mas veces
+        /*
+        
+        while(condicion){
+            codigo....
+        }
+        n -> 
+        for(;;){
+        }
+        
+        recursividad
+        
+        
+        */
         int eleccion;
         do{
             System.out.println("Este es un salto de linea\nAqui seguimos escribiendo");
@@ -134,9 +147,41 @@ public class Clase5 {
         
     }
     
+    //sume un numero (1) y lo aumente de uno en uno hasta el 10
+    /*
+        int numero = 1;
+        do{
+            numero += 1;   --> numero = numero + 1
+            println(numero);
+        } while( numero <10);
+    
+    
+        for(int numero; numero < 10; numero += 1){
+            println(numero);
+        }
+    
+        int numero = 1;
+        while( numero <10){
+            numero += 1;   --> numero = numero + 1
+            println(numero);
+        }
+    */
+    
+    int numeroGlobal;
+    
+    public int SumaHasta10 (int numero){ // 1
+        System.out.println(numero); //1
+        numero += 1; //2
+        if (numero < 10){ //2
+            numero *= SumaHasta10(numero); // numero = 2
+            System.out.println(numero); // 2
+        }
+        return 10;
+    }
+    
     public static void main(String[] args) {
         Clase5 llamada = new Clase5();
-        llamada.Calculadora();
+        llamada.SumaHasta10(1);
     }
     
 }
