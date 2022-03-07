@@ -42,7 +42,7 @@ public class BaseDeDatos {
         3. - Trabajar simulando punteros
     */
     int id_marca;
-    public Marca[] marcas; // |x|x|x|x|new_marca| | | | | |
+    Marca[] marcas; // |x|x|x|x|new_marca| | | | | |
     
     int id_tipos;
     TipoDeProducto[] tipos;
@@ -74,6 +74,10 @@ public class BaseDeDatos {
         
         id_tipo_marcas = 0;
         tipo_marcas = new TipoDeProducto_Marca[999];
+    }
+    
+    public Marca[] getMarca(){
+        return marcas;
     }
     
     public void IngresarMarca(String marca){
