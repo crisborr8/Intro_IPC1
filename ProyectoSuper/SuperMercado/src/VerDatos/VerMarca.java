@@ -17,5 +17,17 @@ public class VerMarca {
         }
         System.out.println("*************************");
     }
+     
+    public String getMarca(BaseDeDatos db, int id){
+        Marca[] marcas_actuales = db.getMarca();
+        for(int i = 0; i < marcas_actuales.length; i++){
+            if (marcas_actuales[i] != null){
+                if (marcas_actuales[i].id == id){
+                    return marcas_actuales[i].Marca;
+                }
+            }
+        }
+        return "";
+    }
     
 }

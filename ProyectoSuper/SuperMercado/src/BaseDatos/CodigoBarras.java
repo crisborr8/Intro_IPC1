@@ -7,4 +7,5 @@ public class CodigoBarras {
     public double precio;
     public int cantidad;
     public int idTipoProducto;
+    public int idMarca;
 }

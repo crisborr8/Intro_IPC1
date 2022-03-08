@@ -50,8 +50,6 @@ public class BaseDeDatos {
     int id_codigos;
     CodigoBarras[] codigos;
     
-    int id_tipo_marcas;
-    TipoDeProducto_Marca[] tipo_marcas;
     
     /*
     Se ejecutan cuando se llaman
@@ -72,12 +70,18 @@ public class BaseDeDatos {
         id_codigos = 0;
         codigos = new CodigoBarras[999];
         
-        id_tipo_marcas = 0;
-        tipo_marcas = new TipoDeProducto_Marca[999];
     }
     
     public Marca[] getMarca(){
         return marcas;
+    }
+    
+    public TipoDeProducto[] getProducto(){
+        return tipos;
+    }
+    
+    public CodigoBarras[] getCodigo(){
+        return codigos;
     }
     
     public void IngresarMarca(String marca){
@@ -106,7 +110,7 @@ public class BaseDeDatos {
         }
     } 
     
-    public void IngresarCodigoBarras(String descripcion, double precio, int cantidad, int idTipoProducto){
+    public void IngresarCodigoBarras(String descripcion, double precio, int cantidad, int idTipoProducto, int idMarca){
         id_codigos++;
         CodigoBarras new_codigo = new CodigoBarras();
         new_codigo.id = id_codigos;
@@ -114,6 +118,7 @@ public class BaseDeDatos {
         new_codigo.precio = precio;
         new_codigo.cantidad = cantidad;
         new_codigo.idTipoProducto = idTipoProducto;
+        new_codigo.idMarca = idMarca;
         for(int i = 0; i < codigos.length; i++){
             if (codigos[i] == null){
                 codigos[i] = new_codigo;
@@ -122,18 +127,5 @@ public class BaseDeDatos {
         }
     } 
     
-    public void IngresarTipoDeProducto_Marca(int id_Marca, int id_TipoDeProducto){
-        id_tipo_marcas++;
-        TipoDeProducto_Marca new_TipoMarca = new TipoDeProducto_Marca();
-        new_TipoMarca.id_TipoMarca = id_tipo_marcas;
-        new_TipoMarca.id_Marca = id_Marca;
-        new_TipoMarca.id_TipoProducto = id_TipoDeProducto;
-        for(int i = 0; i < tipo_marcas.length; i++){
-            if (tipo_marcas[i] == null){
-                tipo_marcas[i] = new_TipoMarca;
-                break;
-            }
-        }
-    } 
     
 }
